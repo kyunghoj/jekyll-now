@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I am a software engineer at Samsung Electronics in Seoul, Korea.  Before that, I earned a PhD in Computer Science and Engineering from the [University at Buffalo (SUNY)](www.cse.buffalo.edu), researching distributed and mobile systems advised by Professor Steven Y. Ko. During my PhD study, I had also worked with great professors such as Prof. Oliver Kennedy and Prof. Karthik Dantu.  Even earlier in my life, I was a master student at Seoul National University and I worked for various employers, including Nexon Corp. in Korea. 
+I am a software engineer at Samsung Electronics (Samsung Research) in Seoul, Korea. Before that, I earned a PhD in Computer Science and Engineering from the [University at Buffalo (SUNY)](www.cse.buffalo.edu), researching distributed and mobile systems under supervision of Prof. Steven Y. Ko. 
+During my PhD study, I had also worked with great professors such as Prof. Oliver Kennedy and Prof. Karthik Dantu.  
+Even earlier in my life, I was a master student at Seoul National University and I worked for various employers, including Nexon Corp. in Korea. 
 
 I am married to an amazing wife, Kyoung Jin Song, a music theorist, with two adorable daughters, Alicia and Bella.
 
