@@ -37,10 +37,6 @@ I am married to an amazing wife, Kyoung Jin Song, a music theorist, with two ado
   Steven Y. Ko, Kyungho Jeon, and Ramses Morales,
   USENIX HotCloud 2011.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
 ### Contact me
 
 [firstname.lastname@gmail.com](mailto:firstname.lastname@gmail.com)
