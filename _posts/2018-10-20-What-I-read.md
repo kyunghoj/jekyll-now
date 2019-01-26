@@ -1,4 +1,4 @@
-# 2018.10.20
+
 [Setup ProxySQL for High Availability (not a Single Point of Failure)](https://www.percona.com/blog/2017/01/19/setup-proxysql-for-high-availability-not-single-point-failure/)
 
 * Percona Blog 에서 ProxySQL을 이용한 HA 구성 방안 제시
