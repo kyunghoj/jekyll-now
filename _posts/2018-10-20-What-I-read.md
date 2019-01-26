@@ -1,3 +1,7 @@
+---
+layout: post
+title: What I read today, 2018-10-20
+---
 
 [Setup ProxySQL for High Availability (not a Single Point of Failure)](https://www.percona.com/blog/2017/01/19/setup-proxysql-for-high-availability-not-single-point-failure/)
 
