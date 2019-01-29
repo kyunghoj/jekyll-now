@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What I learned today, 2018-05-10
+title: MariaDB installation and configuration, 2018-05-10
 ---
 
 ## MariaDB 설치 및 셋업
