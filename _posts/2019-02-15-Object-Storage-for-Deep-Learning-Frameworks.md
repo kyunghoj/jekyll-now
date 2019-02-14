@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Object Storage for Deep Learning Frameworks, 2019-02-14
+title: Object Storage for Deep Learning Frameworks
 ---
 
 2018년 [DIDL](https://didl-conf.github.io/) 이라는 workshop에서 발표된 논문이고 저자들은 모두 이스라엘 Haifa의 IBM Research 소속이다.
