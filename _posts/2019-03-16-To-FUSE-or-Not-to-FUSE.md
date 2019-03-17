@@ -1,6 +1,6 @@
 ---
 layout: post
-title: To FUSE or Not to FUSE: Performance of User-Space File Systems
+title: To FUSE or Not to FUSE
 ---
 
 ![Figure 1. Title](../images/fast17-vangoor/title.jpg) 
