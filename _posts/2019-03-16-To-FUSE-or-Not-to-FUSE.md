@@ -3,10 +3,10 @@ layout: post
 title: To FUSE or Not to FUSE
 ---
 
-![Figure 1. Title](../images/fast17-vangoor/title.jpg) 
-
 일주일에 논문 한 편은 읽자고 마음먹은 후 첫 번째로 뽑은 논문이다. FUSE에 대해 개념은 대충 들어 알고 있다고 생각했지만, 자세히 알아보려고 FUSE Project 홈페이지에 갔더니, FUSE에 대해 자세히 알려면 코드를 읽든가 아니면 이 논문을 추천한다고 해서 고르게 되었다. 
 
+![Figure 1. Title](../images/fast17-vangoor/title.jpg) 
+ 
 ![Figure 2. ](../images/fast17-vangoor/intro.jpg)
 
 파일시스템은 전통적으로 커널에 구현되어 있었지만, FUSE 라는 것이 나와서 파일시스템 로직을 Userspace에서 구현할 수 있게 되었다. 그러다 보니 FUSE로 많은 파일시스템이 구현되었는데, 혹자는 이것이 그저 toy program혹은 prototype 용이라고 하고, 다른 이들은 production에서도 쓸 만하다고 한다. 그 차이를 나누는 주요한 이슈는 성능이고, 이 논문은 다양한 환경과 워크로드에서 FUSE의 성능을 측정해 보고, instrumentation을 통해 병목이 어디인지 찾으려고 한다. 
