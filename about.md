@@ -8,11 +8,10 @@ I am a software engineer at Samsung Electronics (Samsung Research) in Seoul, Kor
 
 Even earlier in my life, I was a master student at Seoul National University and I worked for various employers, including Nexon Corp. in Korea. 
 
-I am married to an amazing wife, Kyoung Jin Song, a music theorist, with two adorable daughters, Alicia and Bella.
-
 ### Work Experience
 
-* Senior Engineer, Samsung Research, Samsung Electronics, September 2017 -- Current.
+* Staff ~~Senior~~ Engineer, Samsung Research, Samsung Electronics, September 2017 -- Current.
+  * (FYI, I wasn't promoted. HR decided for some reason to change the title of the same rank.)
 * Teaching Assistant, University at Buffalo. August 2013 -- May 2017.
 * Research Assistant, University at Buffalo. August 2010 -- July 2013.
 * Software Engineer, Various Employers. January 2003 -- August 2007.
@@ -37,6 +36,6 @@ I am married to an amazing wife, Kyoung Jin Song, a music theorist, with two ado
   Steven Y. Ko, Kyungho Jeon, and Ramses Morales,
   USENIX HotCloud 2011.
 
-### Contact me
+### Contacts
 
 [firstname.lastname@gmail.com](mailto:firstname.lastname@gmail.com)
