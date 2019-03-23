@@ -64,5 +64,19 @@ FUSE의 성능이 좋지 않다는 편견이 많은데, 저자들은 그것이 �
 
 > FUSE has evolved significantly over the years and added several useful optimizations: writeback cache, zero-copy via splicing, and multi-threading. In our personal experience, some in the storage community tend to pre-judge FUSE's performance--assuming it is poor--mainly due to not having information about the improvements FUSE made over the years. We therefore designed our methodology to evaluate and demostrate how FUSE's performance advanced from its basic configurations to ones that include all of the latest optimizations. 
 
+많은 사람들에게 FUSE는 연구 대상이기보다는 실제 product나 prototype을 만들기 위한 도구일 뿐이다. 따라서 그런 사람들을 위해 결과를 10개의 observation으로 Section 5.1. 에 정리했다. 실험은 HDD (Seagate Savvio 15K.2, 15KRPM, 146GB) 와 SSD (Intel X25-M SSD, 200GB) 를 사용하여 수행했다. 자세한 것은 논문 참조.
 
-(To be updated...)
+* *Observation 1.* 상대적인 차이는 워크로드와 하드웨어, 그리고 FUSE 설정에 따라 달랐다. 
+* *Observation 2.* 많은 경우 FUSE의 최적화가 성능 개선에 큰 영향을 미쳤다. 
+* *Observation 3.* 하지만 그 최적화가 오히려 성능을 떨어뜨리기도 했다
+* *Observation 4.* 45가지의 workload 중 단 2 가지의 파일 생성 workload만이 red class (성능이 50% 이상 하락한 경우) 에 속했다. 
+* *Observation 5.* 하드웨어 (SSD or HDD)에 따라서 성능 차이가 많이 났다. Sequential read의 경우, Stackfs는 SSD에 대해 성능 저하가 없었지만 HDD에 대해서는 26-42% 의 저하가 있었다. 하지만 mail-server의 경우 상황이 반대로 나타났다.
+* *Observation 6.* 적어도 한 가지 Stackfs 설정에서 모든 write workload가 SSD와 HDD모두에 대해 Green class (성능 저하가 5% 미만이거나 성능이 오히려 나은 경우)에 속했다. 
+* *Observation 7.* Sequential read 는 HDD와 SSD 대부분에 대해 Green class 였지만 `seq-rd-32th-32f` 이라는 workload 를 HDD 에 수행하였을 때는 Orange class 였다.
+* *Observation 8.* 전반적으로 Stackfs 성능은 metadata-intensive 그리고 macro workload에 대해 좋지 않았다. 특히 SSD에 대해서 특별히 낮았다.
+* *Observation 9.* Stackfs의 CPU 점유율이 더 높았다. 
+* *Observation 10.* StackfsOpt (최적화 적용) 가 StackfsBase (최적화 적용 안함)보다 보통 CPU cycles per operation 이 높았지만, `seq-wr-32th-23f` 와 `rnd-wr-1th-1f` 의 경우 StackfsOpt가 더 낮았다. 
+
+결론:
+
+> In this paper we first presented the detailed design of FUSE, the most popular user-space file system framework. We then conducted a broad performance characterization of FUSE and we present an in-depth analysis of FUSE performance patterns. We found that for many workloads, an optimized FUSE can perform within 5% of native Ext4. However, some workloads are unfriendly to FUSE and even if optimized, FUSE degrades their performance by up to 83%. Also, in terms of the CPU utilization, the relative increase seen is 31%.
