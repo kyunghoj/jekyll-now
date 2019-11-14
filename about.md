@@ -23,16 +23,24 @@ Even earlier in my life, I was a master student at Seoul National University and
 
 ### Publications
 
+* (Poster) Targoat: Improving Dataset Upload Time to Object Storage using Client-Server Cooperation, 
+  Timothy John Ebido, KiChul Park, Kyungho Jeon
+  IEEE Big Data 2019.
+
+* BlueMountain: An Architecture for Customized Data Management on Mobile Systems,
+  Sharath Chandrashekhara, Taeyeon Ki, Kyungho Jeon, Karthik Dantu, Steven Y Ko
+  ACM MobiCom 2017.
+
 * Pixelsior: Photo management as a platform service for mobile apps,
-  Kyungho Jeon, Sharath Chandrashekhara, Karthik Dantu, and Steven Y. Ko.
+  Kyungho Jeon, Sharath Chandrashekhara, Karthik Dantu, Steven Y. Ko
   USENIX HotStorage 2016.
 
 * PigOut: Making multiple hadoop clusters work together,
-  Kyungho Jeon, Sharath Chandrashekhara, Feng Shen, Shikhar Mehra, Oliver Kennedy, and Steven Y. Ko.
+  Kyungho Jeon, Sharath Chandrashekhara, Feng Shen, Shikhar Mehra, Oliver Kennedy, Steven Y. Ko
   IEEE Big Data 2014.
 
 * The HybrEx model for confidentiality and privacy in cloud computing,
-  Steven Y. Ko, Kyungho Jeon, and Ramses Morales,
+  Steven Y. Ko, Kyungho Jeon, Ramses Morales
   USENIX HotCloud 2011.
 
 ### Contacts
