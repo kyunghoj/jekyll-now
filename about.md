@@ -4,14 +4,13 @@ title: About
 permalink: /about/
 ---
 
-I am a software engineer at Samsung Electronics (Samsung Research) in Seoul, Korea. Before that, I earned a PhD in Computer Science and Engineering from the [University at Buffalo (SUNY)](www.cse.buffalo.edu), researching distributed and mobile systems under supervision of Prof. Steven Y. Ko. During my PhD study, I had also worked with great professors such as Prof. Oliver Kennedy and Prof. Karthik Dantu.  
+I am a software engineer at Samsung Electronics (Samsung Research) in Seoul, Korea. Before that, I earned a PhD in Computer Science and Engineering from the [University at Buffalo (aka UB, SUNY at Buffalo, and etc.)](https://www.cse.buffalo.edu), researching distributed and mobile systems under supervision of Prof. Steven Y. Ko. During my PhD study, I had also worked with Prof. Oliver Kennedy and Prof. Karthik Dantu.  
 
 Even earlier in my life, I was a master student at Seoul National University and I worked for various employers, including Nexon Corp. in Korea. 
 
 ### Work Experience
 
-* Staff ~~Senior~~ Engineer, Samsung Research, Samsung Electronics, September 2017 -- Current.
-  * (FYI, I wasn't promoted. HR decided for some reason to change the title of the same rank.)
+* Staff Engineer, Samsung Research, Samsung Electronics, September 2017 -- Current.
 * Teaching Assistant, University at Buffalo. August 2013 -- May 2017.
 * Research Assistant, University at Buffalo. August 2010 -- July 2013.
 * Software Engineer, Various Employers. January 2003 -- August 2007.
