@@ -5,7 +5,9 @@ categories: [papers]
 tags: [fuse, storage, filesystem]
 ---
 
-일주일에 논문 한 편은 읽자고 마음먹은 후 첫 번째로 뽑은 논문이다. FUSE에 대해 개념은 대충 들어 알고 있다고 생각했지만, 자세히 알아보려고 FUSE Project 홈페이지에 갔더니, FUSE에 대해 자세히 알려면 코드를 읽든가 아니면 [이 논문](https://www.usenix.org/conference/fast17/technical-sessions/presentation/vangoor)을 추천한다고 해서 고르게 되었다. 그래서 논문을 읽은 목적은 새로운 아이디어를 얻는 것 보다는 지식 습득에 있었다. 
+일주일에 논문 한 편은 읽자고 마음먹은 후 첫 번째로 뽑은 논문이다. 
+
+[FUSE (Filesystem in Userspace)](https://github.com/libfuse/libfuse/) 에 대해 개념은 대충 들어 알고 있다고 생각했지만, 좀 더 정확히 알아야 겠다는 생각으로 구글 검색을 해 보았더니, FUSE에 대해 자세히 알려면 코드를 읽든가 아니면 [이 논문](https://www.usenix.org/conference/fast17/technical-sessions/presentation/vangoor)을 추천한다고 해서 고르게 되었다. 그래서 논문을 읽은 목적은 새로운 아이디어를 얻는 것 보다는 지식 습득에 있었다. 
 
 > Traditionally, file systems were implemented as part of OS kernels. However, as complexity of file systems grew, many new file systems began being developed in user space. Nowadays, user-space file systems are often used to prototype and evaluate new approaches to file system design. Low performance is considered the main disadvantage of user-space file sytems but the extent of this problem has never been explored systematically. As a result, the topic of user space file systems remains rather controversial: while some consider user-space file systems a toy not to be used in production, others develop full-fledged production file systems in user space.
 
