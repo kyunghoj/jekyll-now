@@ -5,14 +5,15 @@ categories: [tech-talks]
 tags: [storage, filesystem, ceph, cephfs]
 ---
 
-Video: https://cds.cern.ch/record/2691580
-Slides: https://indico.cern.ch/event/765214/contributions/3517132/attachments/1907986/3151718/15-Oliver-Freyermuth-Bonn.pdf
-
 ## 개요
 
+* [Video](https://cds.cern.ch/record/2691580)
+* [Slides](https://indico.cern.ch/event/765214/contributions/3517132/attachments/1907986/3151718/15-Oliver-Freyermuth-Bonn.pdf)
 * 독일 Bonn 대학의 Physics Institute 에서의 Ceph(FS) 사용하는 것을 소개.
 * Ceph 가 제공하는 주요 기능 세 가지를 모두 사용하고 있음
-  - CephFS: High Throughput Computing (HTC) cluster 용. Erasure Coding (k = 4, m =2) 와 Snappy compression 사용
+  - CephFS: High Throughput Computing (HTC) cluster 용. 
+    - Erasure Coding (k = 4, m =2)
+    - Snappy compression 사용
   - RBD: 가상화 서버 클러스터에서 사용됨. 3개의 건물에 3 replica 구성
   - RGW: Backup storage 로 테스트 중
 
