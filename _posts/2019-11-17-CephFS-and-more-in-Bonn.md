@@ -5,6 +5,8 @@ categories: [tech-talks]
 tags: [storage, filesystem, ceph, cephfs]
 ---
 
+논문은 잘 읽지 못하고, 대신 Technical Talk을 동영상으로 보거나, 슬라이드를 읽는 경우가 많다. 간단히 정리하는 것이 기억하는 데에 도움이 될 것 같아 포스트로 남긴다. 
+
 ## 개요
 
 * [Video](https://cds.cern.ch/record/2691580)

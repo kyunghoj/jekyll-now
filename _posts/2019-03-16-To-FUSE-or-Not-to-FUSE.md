@@ -5,9 +5,7 @@ categories: [papers]
 tags: [fuse, storage, filesystem]
 ---
 
-일주일에 논문 한 편은 읽자고 마음먹은 후 첫 번째로 뽑은 논문이다. 
-
-[FUSE (Filesystem in Userspace)](https://github.com/libfuse/libfuse/) 에 대해 개념은 대충 들어 알고 있다고 생각했지만, 좀 더 정확히 알아야 겠다는 생각으로 구글 검색을 해 보았더니, FUSE에 대해 자세히 알려면 코드를 읽든가 아니면 [이 논문](https://www.usenix.org/conference/fast17/technical-sessions/presentation/vangoor)을 추천한다고 해서 고르게 되었다. 그래서 논문을 읽은 목적은 새로운 아이디어를 얻는 것 보다는 지식 습득에 있었다. 
+[FUSE (Filesystem in Userspace)](https://github.com/libfuse/libfuse/) 에 대해 개념은 대충 들어 알고 있다고 생각했다. 하지만 좀 더 정확히 알아야 겠다는 생각에 구글 검색을 해 보았더니, FUSE에 대해 자세히 알려면 코드를 읽든가 아니면 [이 논문](https://www.usenix.org/conference/fast17/technical-sessions/presentation/vangoor)을 추천한다고 해서 고르게 되었다. 그래서 논문을 읽은 목적은 새로운 아이디어를 얻는 것 보다는 지식 습득에 있었다. 
 
 > Traditionally, file systems were implemented as part of OS kernels. However, as complexity of file systems grew, many new file systems began being developed in user space. Nowadays, user-space file systems are often used to prototype and evaluate new approaches to file system design. Low performance is considered the main disadvantage of user-space file sytems but the extent of this problem has never been explored systematically. As a result, the topic of user space file systems remains rather controversial: while some consider user-space file systems a toy not to be used in production, others develop full-fledged production file systems in user space.
 
@@ -37,7 +35,7 @@ Application 들은 파일시스템과 직접 얘기하는 것이 아니라 [VFS]
 
 > When the kernel evaluates if a user process has permissions to access a file, it generates an `ACCESS` request. By handling this request, the FUSE daemon can implement custom permission logic. However, typically users mount FUSE with the *default_permissions* option that allows kernel to grant or deny access to a file based on its standard Unix attributes (ownership and permission bits). In this case no `ACCESS` requests are generated.
 
-`ACCESS` request 를 처리하면 custom permission 로직을 구현할 수 있다. 예를 들어 분산시스템 환경에서 별도의 권한 및 접근 관리를 제공하는 서비스가 있다면, 이 부분을 이용할 수 있을 것이다. 물론 보통은 `default_permissions` 옵션을 이용해서 마운트 하게 되는데, 이때는 통상적인 Unix 의 permission 시스템(ownership 과 permission bits 기반)을 따르게 된다. 
+`ACCESS` request 를 처리하면 custom permission 로직을 구현할 수 있다. 예를 들어 분산시스템 환경에서 표준적인 방식 (예를 들면 LDAP 등) 별도의 권한 및 접근 관리를 제공하는 서비스가 있다면, 이 부분을 이용할 수 있을 것이다. 물론 보통은 `default_permissions` 옵션을 이용해서 마운트 하게 되는데, 이때는 통상적인 Unix 의 permission 시스템(ownership 과 permission bits 기반)을 따르게 된다. 
 
 <center>
 <img src="../images/fast17-vangoor/figure_2.jpg" width="640" alt="Figure 2. FUSE queues organizations"/>
@@ -55,7 +53,7 @@ Application 들은 파일시스템과 직접 얘기하는 것이 아니라 [VFS]
 
 또 다른 write 성능 개선을 위한 방법. write-back cache를 사용하고, 한꺼번에 여러개의 블록을 FUSE daemon 에 보내도록 했다.
 
-여기까지는 FUSE 에 대한 소개였고, 이제 논문의 목적인 성능 측정을 하기 위해 Stackfs라는 것을 만들었다. Stackfs는 간단한 stackable passthrough file system으로, Ext4 위에서 request들을 그대로 전달하는 기능만을 가지고 있다고 생각하면 될 것 같다. 또한 (자세한 성능 측정을 위해) FUSE kernel module과 user-space library에 instrumentation도 추가했다. 
+여기까지는 FUSE 에 대한 소개였고, 이제 논문의 목적인 성능 측정을 하기 위해 Stackfs라는 것을 만들었다고 한다. Stackfs는 간단한 stackable passthrough file system으로, Ext4 위에서 request들을 그대로 전달하는 기능만을 가지고 있다고 생각하면 될 것 같다. 또한 (자세한 성능 측정을 위해) FUSE kernel module과 user-space library에 instrumentation도 추가했다. 
 
 > Stackfs is a file system that passes FUSE requests unmodified directly to the underlying file system. The reason for Stackfs was twofold. (1) After examing the code of all publicly available [28, 43] FUSE-based file systems, we found that most of them are stackable (i.e., deployed on to of other, often in-kernel file systems). (2) We wanted to add as little overhead as possible, to isolate the overhead of FUSE's kernel and library. 
 
