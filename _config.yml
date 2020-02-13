@@ -1,7 +1,8 @@
 #
 # This file contains configuration flags to customize your site
 #
-remote_theme: thelehhman/plainwhite-jekyll
+# remote_theme: thelehhman/plainwhite-jekyll
+remote_theme: thelehhman/texture
 
 # Name of your site (displayed in the header)
 name: Kyungho Jeon (전경호)
