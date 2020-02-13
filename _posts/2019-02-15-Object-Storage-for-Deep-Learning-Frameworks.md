@@ -7,7 +7,7 @@ title: Object Storage for Deep Learning Frameworks
 
 데이터가 폭발적으로 많아지면서 Deep Learning(DL)으로 대표되는 Machine Learning(ML)이 매우 중요한 기술이 되었다...는 이야기는 너무나 자주 듣는 이야기라서 짜증이 날 정도이다. 여하튼, DL이 중요해진 계기 중 하나는 하드웨어 기반의 가속기 (GPU, FPGA, Tensor Processing Unit) 같은 것들 덕분이라고 한다. GPU를 활용한다고 가정했을 때, DL 을 위한 시스템 환경은 분산시스템 환경보다는 단일 시스템 (책상 위 PC 혹은 workstation)을 가정하고 있고, 훈련을 위한 데이터는 물리적으로 GPU와 같은 시스템에 존재한다고 가정한 것이다. 그래서 POSIX file system interface (Unix/Linux 에서 사용하는 File 인터페이스라고 생각하면 됨) 를 주요 데이터 접근 계층으로 가정하고 있다. (TensorFlow의 경우 Amazon S3 라는 Object Storage를 기본적으로 지원하기는 한다.)
 
-이 모델은 어떻게 보면 scalable하지 않다. 비싼 GPU가 설치된 workstation pc 를 모든 엔지니어에게 나누어 주기도 그렇고, 그런다 한들 개별 PC에 설치할 수 있는 GPU 카드 갯수의 제약이 있고, 훈련에 필요한 데이터를 각 PC에 모두 복사하는 것은 현실적이지도 않고 비효율적이다. 그래서 요즘 사람들이 하는 일은 [NVidia DGX-2](https://www.nvidia.com/ko-kr/data-center/dgx-2/)와 같은 장비를 서버실에 (여러 개) 넣고, [DDN](https://www.ddn.com/products/lustre-file-system-exascaler/) 와 같은 비싼 파일 스토리지 장비를 사서 DGX-2가 POSIX file system interface를 통해 데이터를 읽고 쓸 수 있게 만든다.
+이 모델은 어떻게 보면 scalable하지 않다. 비싼 GPU가 설치된 workstation pc 를 모든 엔지니어에게 나누어 주기도 그렇고, 그런다 한들 개별 PC에 설치할 수 있는 GPU 카드 갯수의 제약이 있고, 훈련에 필요한 데이터를 각 PC에 모두 복사하는 것은 현실적이지도 않고 비효율적이다. 그래서 요즘 사람들이 하는 일은 여러 개의 GPU 카드를 장착한 서버를 서버실에 (여러 개) 넣고, [DDN](https://www.ddn.com/products/lustre-file-system-exascaler/) 와 같은 비싼 파일 스토리지 장비를 사서 DGX-2가 POSIX file system interface를 통해 데이터를 읽고 쓸 수 있게 만든다.
 
 이 논문은 Amazon S3 로 대표되는 Object Storage 를 DL 훈련을 위한 데이터 저장소로 활용하는 방안에 대해 살펴본다. 파일 시스템 대비 Object Storage의 장점은:
 
